@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function createDropdownMenu(options, elementId) {
+    let select = document.createElement("select");
+    
+    options.forEach(option => {
+        let opt = document.createElement("option");
+        opt.value = option;
+        opt.textContent = option;
+        select.appendChild(opt);
+    });
+    
+    document.getElementById(elementId).appendChild(select);
+}
+let menuOptions = ["Option 1", "Option 2", "Option 3"];
+createDropdownMenu(menuOptions, "menuContainer");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

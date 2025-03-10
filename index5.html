@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factors of a Number</title>
+    <script>
+        function computeFactors() {
+            let num = parseInt(document.getElementById("number").value);
+            let factors = [];
+            
+            if (num > 0) {
+                for (let i = 1; i <= num; i++) {
+                    if (num % i === 0) {
+                        factors.push(i);
+                    }
+                }
+                document.getElementById("output").innerHTML = `Factors of ${num}: ${factors.join(", ")}`;
+            } else {
+                document.getElementById("output").innerHTML = "Please enter a positive integer.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Find Factors of a Number</h2>
+    <label for="number">Enter a positive integer:</label>
+    <input type="number" id="number">
+    <button onclick="computeFactors()">Compute Factors</button>
+    <div id="output" style="font-size: 20px; margin-top: 10px;"></div>
+</body>
+</html>

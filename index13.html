@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function isSubset(obj1, obj2) {
+    return Object.keys(obj2).every(key => obj1.hasOwnProperty(key) && obj1[key] === obj2[key]);
+}
+let object1 = { a: 1, b: 2, c: 3 };
+let object2 = { a: 1, b: 2 };
+
+console.log(`Is object2 a subset of object1?`, isSubset(object1, object2));
+    </script>
+</head>
+<body>
+</body>
+</html>

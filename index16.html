@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Object Properties</title>
+    <script>
+        function listObjectProperties(obj) {
+            return Object.keys(obj);
+        }
+        function displayProperties() {
+            let student = { name: "Anuj Sadhu", course: "PGDCA", rollno: "0012" };
+            alert("Properties of student object: " + listObjectProperties(student).join(", "));
+        }
+    </script>
+</head>
+<body>
+    <button onclick="displayProperties()">Show Object Properties</button>
+</body>
+</html>

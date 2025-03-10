@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function capitalizeWords(str) {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+let originalString = "dhruv gupta";
+console.log(`Original string: ${originalString}`);
+console.log(`Capitalized string: ${capitalizeWords(originalString)}`);
+    </script>
+</head>
+<body>
+</body>
+</html>

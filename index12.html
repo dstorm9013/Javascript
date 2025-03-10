@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function countVowelsAndConsonants(str) {
+        let vowels = "aeiouAEIOU";
+        let vowelCount = 0;
+        let consonantCount = 0;
+        
+        for (let char of str) {
+            if (/[a-zA-Z]/.test(char)) {
+                if (vowels.includes(char)) {
+                    vowelCount++;
+                } else {
+                    consonantCount++;
+                }
+            }
+        }   
+        return { vowels: vowelCount, consonants: consonantCount };
+    }
+    let originalString = "hello world";
+    let counts = countVowelsAndConsonants(originalString);
+    console.log(`Original string: ${originalString}`);
+    console.log(`Vowels: ${counts.vowels}, Consonants: ${counts.consonants}`)
+</script></head>
+<body>
+</body>
+</html>
